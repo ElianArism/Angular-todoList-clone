@@ -1,0 +1,15 @@
+<div class="options-container">
+    <i 
+      *ngIf="!pageFeatured" 
+      class="far fa-edit op"
+      (click)="editTask()"
+    >
+    </i>
+    <i (click)="deleteTask()"[attr.data-id]="taskId" class="far fa-trash-alt op"></i>
+    <i 
+        [class]=" (!featured) ? 'far fa-star op' : 'fas fa-star op' "
+        (click)="changeFeatured()"
+        [attr.data-id]="taskId"
+    >
+    </i>
+</div>

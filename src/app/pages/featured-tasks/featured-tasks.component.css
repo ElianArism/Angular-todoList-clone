@@ -1,0 +1,43 @@
+.title {
+    font-size: 30px;
+    text-align: center;
+    margin: 35px 0;
+    text-decoration: underline 2px #aaaaaa;
+}
+
+.featured-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 80%;
+    gap: 20px; 
+}
+
+.task {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 200px;
+    border: 1px solid #aaaaaa;
+    border-radius: 10px;
+}
+
+.task-title {
+    border-radius: 10px;
+    display: flex;
+    font-size: 18px;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.task-title i:hover {
+    cursor: pointer;
+}
+
+.task-body{
+    padding: 10px;
+    font-size: 17px;
+    overflow-x: none;
+    overflow-y: scroll;
+}

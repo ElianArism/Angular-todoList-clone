@@ -1,0 +1,29 @@
+<article class="list-of-tasks-container">
+
+    <h1 class="title">Your featured tasks list.</h1>
+
+    <ul class="featured-list">  
+        
+        <li class="task" *ngFor="let ft of featuredTasks">
+            <div class="task-title">
+                <i (click)="Complete(ft)" [class]=" (!ft.complete) ? 'far fa-check-circle':'fas fa-check-circle' "></i>
+                {{ ft.title }}
+                <app-options 
+                    [taskId]="ft.id" 
+                    [featured]="ft.featured"
+                    [pageFeatured]="true"
+                    (changeFeaturedEvent)="changeFeatured($event)"
+                    (deleteTaskEvent)="deleteTask($event)"
+                >
+                </app-options>
+            </div>
+            
+            <hr>
+            <div class="task-body">
+                <p [class]="ft.complete ? 'complete' : '' ">{{ft.body}}</p>
+            </div>
+        </li>
+      
+    </ul>
+
+</article>

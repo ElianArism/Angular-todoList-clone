@@ -1,0 +1,41 @@
+.options-container {
+    width: 100%;   
+}
+
+.options-menu {
+    width: 60%;
+    margin: auto;
+    list-style: none;
+}
+.option, .option-black {
+    margin: 30px auto;
+    font-size: 18px;
+    text-align: center;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 1em;
+    
+}
+
+.option i, .option-black i {
+    color: #aaaaaa !important;
+    left: 30px;
+    position: absolute;
+}
+
+.option:hover { 
+    background-color: #aaaaaa;
+    color: #ffe2e2;
+    cursor: pointer;
+    padding: 15px;
+    transition: 400ms all;
+}
+
+.option-black:hover {
+    background-color: #aaaaaa;
+    color:  #495464;
+    cursor: pointer;
+    padding: 15px;
+    transition: 400ms all;
+}

@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    color: #aaaaaa;
+    height: 100vh;
+}
+
+.btn-theme:hover, .op {
+    cursor: pointer;
+}
+
+.light {
+    color: #aaaaaa;
+    background-color: #f6f6f6; 
+}
+
+.dark {
+    color: white;
+    background-color:  #495464;
+}
+
+.sidebar-light {
+    background-color: #ffe2e2;   
+}
+
+.sidebar-dark {
+    background-color: #5d6777;
+}
+
+.dark .input-form {
+    color: white;
+}
+

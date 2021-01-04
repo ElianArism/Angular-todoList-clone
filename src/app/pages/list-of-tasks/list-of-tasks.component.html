@@ -1,0 +1,41 @@
+<article class="form-container">
+    <form class="form" [formGroup]="taskForm" (ngSubmit)="addTask()">
+        <label for="title" class="label-form">Title:</label>
+        <input name="title" type="text" class="input-form" formControlName="title">
+
+        <label for="body" class="label-form">Body:</label>
+        <textarea name="body" cols="" rows="10" class="input-form" formControlName="body"></textarea>
+        
+        <input type="submit" [value]="taskSelectedToEdit ? 'Edit task' : 'Add task' " [class]="!darkMode ? 'btn-submit btn-dark' : 'btn-submit btn-light'" [disabled]="taskForm.invalid">
+    </form>
+</article>
+
+<hr class="hr">
+
+<article class="list-of-tasks-container">
+
+    <h1 class="title">Your tasks list.</h1>
+
+    <ul class="list-of-tasks">  
+        
+        <li class="task" *ngFor="let t of tasks">
+            <div class="task-title">
+                <i  (click)="Complete(t)" [class]=" (!t.complete) ? 'far fa-check-circle':'fas fa-check-circle' "></i>
+                {{t.title}}
+                <app-options 
+                    [taskId]="t.id" [featured]="t.featured"
+                    [pageFeatured]="false"
+                    (changeFeaturedEvent)="changeFeatured($event)"
+                    (editTaskEvent)="editTask($event)"
+                    (deleteTaskEvent)="deleteTask($event)"
+                ></app-options>
+            </div>
+            
+            <hr>
+            <div class="task-body">
+                <p [class]="t.complete ? 'complete' : '' ">{{t.body}}</p>
+            </div>
+        </li>
+      
+    </ul>
+</article>
